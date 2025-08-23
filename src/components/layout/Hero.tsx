@@ -1,15 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Button from "@/components/ui/Button";
 import bg from "@/public/hero-bg.avif";
-import Link from "next/link";
-import LogoSVG from "../svg/LogoSVG";
 import Image from "next/image";
 import { useAnimation, motion } from "framer-motion";
 import SocialLink from "../ui/SocialLink";
 import Animated from "./Animated";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import clsx from "clsx";
+import CTAButton from "../ui/CTAButton";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
@@ -83,8 +81,16 @@ export default function Hero() {
                 delay={1.0}
                 duration={0.8}
                 variant={"top-sm"}
+                className="mb-6"
               >
-                <LogoSVG width={150} height={150} />
+                <Image
+                  src="/YAICHILOGO.png"
+                  alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
+                  width={280}
+                  height={93}
+                  className="w-48 h-auto md:w-64 lg:w-72"
+                  priority
+                />
               </Animated>
               <Animated
                 as="h1"
@@ -102,11 +108,21 @@ export default function Hero() {
                 the mastery of traditional techniques and the purity of fresh,
                 locally-sourced ingredients.
               </Animated>
-              <Animated delay={0.9} className="flex flex-row gap-8 mt-8">
-                <Link href="/menu#menu">
-                  <Button variant="primary">Explore menu</Button>
-                </Link>
-                {/* <Button variant="outlined">Secondary</Button> */}
+              <Animated delay={0.9} className="flex flex-row flex-wrap gap-4 mt-8">
+                <CTAButton
+                  href="https://www.toasttab.com/yaichi-placeholder"
+                  variant="primary"
+                  size="lg"
+                >
+                  Order Online
+                </CTAButton>
+                <CTAButton
+                  href="https://www.doordash.com/store/yaichi-placeholder"
+                  variant="secondary"
+                  size="lg"
+                >
+                  Delivery
+                </CTAButton>
               </Animated>
             </div>
             <div className="flex flex-row items-center gap-8 left-40 bottom-20">

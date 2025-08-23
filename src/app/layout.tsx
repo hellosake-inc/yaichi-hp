@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import FloatingCTA from "@/components/ui/FloatingCTA";
 import "../styles/main.scss";
 import { Inter, Poppins } from 'next/font/google';
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${inter.className} overflow-x-hidden`}>
         <Header />
         {children}
+        <FloatingCTA />
       </body>
     </html>
   );

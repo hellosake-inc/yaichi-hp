@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import LogoSVG from "../svg/LogoSVG";
+import Image from "next/image";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import Hamburger from "../ui/Hamburger";
+import CTAButton from "../ui/CTAButton";
 
 const links = [
   { id: 0, title: "Home", path: "/" },
-  { id: 1, title: "Menu", path: "/menu" },
-  { id: 2, title: "About", path: "/about" },
-  { id: 3, title: "Contact", path: "/contact" },
+  { id: 1, title: "About", path: "/about" },
+  { id: 2, title: "Contact", path: "/contact" },
 ];
 
 export default function Header() {
@@ -56,13 +56,16 @@ export default function Header() {
             <div className="flex items-center justify-between w-full">
               <Link
                 href="/"
-                className="flex items-center justify-center gap-2 text-2xl font-semibold text-gray-800"
+                className="flex items-center justify-center"
               >
-                <LogoSVG width={50} height={50} />
-                <span className="flex gap-1">
-                  <span className="text-gray-800 font-brush">Asian</span>
-                  <span className="text-primary-600 font-brush">Food</span>
-                </span>
+                <Image
+                  src="/YAICHILOGO.png"
+                  alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
+                  width={180}
+                  height={60}
+                  className="h-12 w-auto md:h-14 lg:h-16"
+                  priority
+                />
               </Link>
               <Hamburger isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
             </div>
@@ -93,6 +96,22 @@ export default function Header() {
                     </Link>
                   );
                 })}
+              </div>
+              <div className="flex flex-col gap-4 mt-6 lg:flex-row lg:gap-3 lg:mt-0 lg:ml-4">
+                <CTAButton
+                  href="https://www.toasttab.com/yaichi-placeholder"
+                  variant="primary"
+                  size="sm"
+                >
+                  Order Online
+                </CTAButton>
+                <CTAButton
+                  href="https://www.doordash.com/store/yaichi-placeholder"
+                  variant="secondary"
+                  size="sm"
+                >
+                  Delivery
+                </CTAButton>
               </div>
             </div>
           </div>

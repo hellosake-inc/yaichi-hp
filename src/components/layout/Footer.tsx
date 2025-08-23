@@ -1,12 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import LogoSVG from "../svg/LogoSVG";
+import Image from "next/image";
 
 const links = [
   { id: 0, title: "Home", path: "/" },
-  { id: 1, title: "Menu", path: "/menu" },
-  { id: 2, title: "About", path: "/about" },
-  { id: 3, title: "Contact", path: "/contact" },
+  { id: 1, title: "About", path: "/about" },
+  { id: 2, title: "Contact", path: "/contact" },
 ];
 
 export default function Footer() {
@@ -16,13 +15,15 @@ export default function Footer() {
         <div className="max-w-screen-xl mx-auto text-center">
           <Link
             href="/"
-            className="flex items-center justify-center gap-2 text-2xl font-semibold text-gray-800"
+            className="flex items-center justify-center mb-4"
           >
-            <LogoSVG width={50} height={50} />
-            <span className="flex gap-1">
-              <span className="text-gray-800 font-brush">Asian</span>
-              <span className="text-primary-600 font-brush">Food</span>
-            </span>
+            <Image
+              src="/YAICHILOGO.png"
+              alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
+              width={200}
+              height={67}
+              className="h-12 w-auto"
+            />
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-4 mb-6 text-gray-700">
             {links.map(({ id, title, path }) => {
