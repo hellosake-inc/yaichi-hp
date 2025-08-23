@@ -41,14 +41,14 @@ export default function Header() {
 
   return (
     <>
-      <div className={clsx(isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible", "transition absolute w-full h-full bg-black/50")} onClick={() => setIsMenuOpen(false)}></div>
+      <div className={clsx(isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible", "transition absolute w-full h-full bg-black/30")} onClick={() => setIsMenuOpen(false)}></div>
       <nav
         id="Header"
         className={clsx(
-          "z-40 w-full transition",
+          "z-40 w-full transition shadow-sm",
           isHomepage &&
-            (isScrolled || isMenuOpen ? "bg-neutral-900" : "bg-neutral-900/60"),
-          isHomepage ? "fixed top-0" : "sticky top-0 bg-neutral-900"
+            (isScrolled || isMenuOpen ? "bg-white" : "bg-white/95"),
+          isHomepage ? "fixed top-0" : "sticky top-0 bg-white"
         )}
       >
         <div className="container">
@@ -56,12 +56,12 @@ export default function Header() {
             <div className="flex items-center justify-between w-full">
               <Link
                 href="/"
-                className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100"
+                className="flex items-center justify-center gap-2 text-2xl font-semibold text-gray-800"
               >
                 <LogoSVG width={50} height={50} />
                 <span className="flex gap-1">
-                  <span className="text-white font-brush">Asian</span>
-                  <span className="text-primary-500 font-brush">Food</span>
+                  <span className="text-gray-800 font-brush">Asian</span>
+                  <span className="text-primary-600 font-brush">Food</span>
                 </span>
               </Link>
               <Hamburger isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
@@ -69,7 +69,7 @@ export default function Header() {
             <div
               className={clsx(
                 isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible",
-                "lg:visible transition absolute inset-x-0 z-20 w-full px-6 py-4 duration-300 ease-in-out bg-neutral-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
+                "lg:visible transition absolute inset-x-0 z-20 w-full px-6 py-4 duration-300 ease-in-out bg-white shadow-lg lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center"
               )}
             >
               <div className="flex flex-col items-center gap-8 lg:flex-row lg:mx-6">
@@ -81,14 +81,14 @@ export default function Header() {
                       className={clsx(
                         "relative my-2 transition-colors duration-300 transform  md:mx-4 md:my-0",
                         pathname == path
-                          ? "text-primary-400"
-                          : "text-neutral-200 hover:text-primary-400"
+                          ? "text-primary-600 font-medium"
+                          : "text-gray-700 hover:text-primary-600"
                       )}
                       href={path}
                     >
                       {title}
                       {pathname == path && (
-                        <div className="absolute w-5 h-[3px] -translate-x-1/2 rounded-custom -bottom-2 left-1/2 bg-primary-400"></div>
+                        <div className="absolute w-5 h-[3px] -translate-x-1/2 rounded-custom -bottom-2 left-1/2 bg-primary-600"></div>
                       )}
                     </Link>
                   );

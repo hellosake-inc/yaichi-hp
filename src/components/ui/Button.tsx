@@ -47,9 +47,9 @@ export default function Button({
     {
       variants: {
         variant: {
-          primary: "text-white bg-primary-500 hover:bg-primary-400",
-          neutral: "bg-neutral-500 hover:bg-neutral-400",
-          outlined: "text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 dark:border-primary-500 dark:text-primary-500 dark:hover:text-white dark:hover:bg-primary-500 dark:focus:ring-primary-800",
+          primary: "text-white bg-primary-600 hover:bg-primary-700",
+          neutral: "bg-gray-600 hover:bg-gray-700 text-white",
+          outlined: "text-primary-600 hover:text-white border border-primary-600 hover:bg-primary-600",
           ghost:
             "group bg-transparent-500 hover:bg-neutral-500 text-neutral-500 hover:text-neutral-500 font-bold",
         },

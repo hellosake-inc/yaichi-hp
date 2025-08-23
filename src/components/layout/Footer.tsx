@@ -11,20 +11,20 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer id="Footer" className="py-6 bg-neutral-900">
+    <footer id="Footer" className="py-6 bg-gray-100 border-t border-gray-200">
       <div className="container container--sm">
         <div className="max-w-screen-xl mx-auto text-center">
           <Link
             href="/"
-            className="flex items-center justify-center gap-2 text-2xl font-semibold text-neutral-100"
+            className="flex items-center justify-center gap-2 text-2xl font-semibold text-gray-800"
           >
             <LogoSVG width={50} height={50} />
             <span className="flex gap-1">
-              <span className="text-white font-brush">Asian</span>
-              <span className="text-primary-500 font-brush">Food</span>
+              <span className="text-gray-800 font-brush">Asian</span>
+              <span className="text-primary-600 font-brush">Food</span>
             </span>
           </Link>
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-4 mb-6 text-neutral-900 dark:text-white">
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-4 mb-6 text-gray-700">
             {links.map(({ id, title, path }) => {
               return (
                 <Link key={id} className="hover:underline" href={path}>
@@ -33,15 +33,8 @@ export default function Footer() {
               );
             })}
           </div>
-          <span className="text-sm text-neutral-500 sm:text-center dark:text-neutral-400">
-            Created by{" "}
-            <Link
-              className="hover:underline"
-              href={"https://github.com/brozinsky"}
-            >
-              brozinsky
-            </Link>
-            {" "}© 2024 All Rights Reserved.
+          <span className="text-sm text-gray-500 sm:text-center">
+            © 2024 Yaichi Restaurant. All Rights Reserved.
           </span>
         </div>
       </div>

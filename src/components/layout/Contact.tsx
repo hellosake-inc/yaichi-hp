@@ -9,12 +9,12 @@ export default function Contact() {
   const isMobile = useMediaQuery(`(max-width: 768px)`);
 
   return (
-    <section id="Contact" className="bg-neutral-900 py-section">
+    <section id="Contact" className="bg-gray-50 py-section">
       <ScrollAnimated className="container container--sm">
         <div className="lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2 lg:mx-6">
-            <h2 className="text-center lg:text-left text-neutral-100 heading-second">
-              <span className="text-primary-500">Contact us</span> <br /> for
+            <h2 className="text-center lg:text-left text-gray-800 heading-second">
+              <span className="text-primary-600">Contact us</span> <br /> for
               more info
             </h2>
 
@@ -22,7 +22,7 @@ export default function Contact() {
               <div className="flex items-start gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="hidden w-6 h-6 lg:block text-primary-500"
+                  className="hidden w-6 h-6 lg:block text-primary-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -41,13 +41,13 @@ export default function Contact() {
                 </svg>
 
                 <div className="flex flex-col gap-2 text-center lg:text-left">
-                  <span className="truncate w-72 text-neutral-400">
+                  <span className="truncate w-72 text-gray-600">
                     1234 Ipsum Street
                   </span>
-                  <span className="truncate w-72 text-neutral-400">
+                  <span className="truncate w-72 text-gray-600">
                     Loremville, Ipsumia 56789
                   </span>
-                  <span className="truncate w-72 text-neutral-400">
+                  <span className="truncate w-72 text-gray-600">
                     Consectetur Adipiscing Elite.
                   </span>
                 </div>
@@ -56,7 +56,7 @@ export default function Contact() {
               <div className="flex items-center justify-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 text-primary-500 "
+                  className="w-5 h-5 text-primary-600 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -69,7 +69,7 @@ export default function Contact() {
                   />
                 </svg>
                 <Link
-                  className="truncate text-neutral-400"
+                  className="truncate text-gray-600"
                   href={"tel:1234567890"}
                 >
                   (123) 456-7890
@@ -79,7 +79,7 @@ export default function Contact() {
               <div className="flex items-center justify-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5 text-primary-500 "
+                  className="w-5 h-5 text-primary-600 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -93,7 +93,7 @@ export default function Contact() {
                 </svg>
 
                 <Link
-                  className="truncate w-fit text-neutral-400"
+                  className="truncate w-fit text-gray-600"
                   href={"mailto:contact@loremipsum.com"}
                 >
                   contact@loremipsum.com
@@ -102,7 +102,7 @@ export default function Contact() {
             </address>
 
             <section className="mt-6 ">
-              <p className="mb-2 text-center lg:text-left text-neutral-300">
+              <p className="mb-2 text-center lg:text-left text-gray-700">
                 Follow us
               </p>
               <div className="flex items-center justify-center gap-2 lg:justify-start">
