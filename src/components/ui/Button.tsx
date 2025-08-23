@@ -42,7 +42,7 @@ export default function Button({
   const classes = cva(
     [
       className,
-      "font-medium tracking-wider relative flex items-center justify-center w-fit gap-2 cursor-pointer",
+      "font-medium tracking-wide relative flex items-center justify-center w-fit gap-2 cursor-pointer transition-all duration-300 ease-out shadow-subtle hover:shadow-card",
     ],
     {
       variants: {

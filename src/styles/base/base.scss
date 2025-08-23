@@ -10,10 +10,17 @@ body {
 
 .font-brush {
   font-family: $font-family-serif;
+  font-weight: 500;
+}
+
+.font-heading {
+  font-family: $font-family-serif;
+  font-weight: 500;
 }
 
 p {
-  letter-spacing: 0.2px;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
 }
 
 a {
@@ -70,10 +77,13 @@ a {
 }
 
 .heading-first {
-  @apply text-3xl font-semibold md:text-5xl font-brush ;
-
+  @apply text-4xl font-semibold md:text-6xl tracking-tight;
+  font-family: $font-family-serif;
+  line-height: 1.2;
 }
 
 .heading-second {
-  @apply text-2xl md:text-3xl font-brush;
+  @apply text-3xl md:text-4xl font-medium tracking-tight;
+  font-family: $font-family-serif;
+  line-height: 1.3;
 }

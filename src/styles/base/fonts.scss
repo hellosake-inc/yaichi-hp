@@ -1,13 +1,7 @@
 $font-path: "../../fonts/";
 
+// Hiromisake font removed - using Google Fonts instead
 
-@font-face {
-  font-family: "Hiromisake";
-  font-weight: 500;
-  font-style: normal;
-  font-display: "swap";
-  src: url("#{$font-path}/Hiromisake/Hiromisake.ttf") format("truetype");
-}
 // ---------------------------------------------Satoshi---------------------------------------------
 // ------------------------------------------------------------------------------------------------
 @font-face {

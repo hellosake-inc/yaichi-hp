@@ -45,10 +45,10 @@ export default function Header() {
       <nav
         id="Header"
         className={clsx(
-          "z-40 w-full transition shadow-sm",
+          "z-40 w-full transition-all duration-300",
           isHomepage &&
-            (isScrolled || isMenuOpen ? "bg-white" : "bg-white/95"),
-          isHomepage ? "fixed top-0" : "sticky top-0 bg-white"
+            (isScrolled || isMenuOpen ? "bg-white shadow-card" : "bg-white/95 shadow-subtle"),
+          isHomepage ? "fixed top-0" : "sticky top-0 bg-white shadow-card"
         )}
       >
         <div className="container">

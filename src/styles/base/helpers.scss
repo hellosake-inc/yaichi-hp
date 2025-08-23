@@ -10,3 +10,22 @@
     justify-content: center;
     align-items: center;
 }
+
+// Modern card styles
+.card {
+  @apply bg-white rounded-modern shadow-card p-6 transition-all duration-300 hover:shadow-hover;
+}
+
+.card-minimal {
+  @apply bg-white rounded-lg shadow-subtle p-4 transition-all duration-300 hover:shadow-card;
+}
+
+// Modern section styles
+.section-modern {
+  @apply py-16 md:py-24;
+}
+
+// Smooth transitions
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
