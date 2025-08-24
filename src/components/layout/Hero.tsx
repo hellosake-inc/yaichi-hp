@@ -37,8 +37,8 @@ export default function Hero() {
         className={clsx(
           "absolute top-0 left-0 z-10 w-full h-full",
           isMobile
-            ? "bg-gradient-to-r from-neutral-900 to-neutral-900/40"
-            : "bg-gradient-to-r from-neutral-900"
+            ? "bg-gradient-to-r from-neutral-900/80 to-neutral-900/40"
+            : "bg-gradient-to-r from-neutral-900/90 via-neutral-900/60 to-transparent"
         )}
       ></div>
       <motion.div
@@ -55,7 +55,7 @@ export default function Hero() {
             onLoad={() => setLoaded(true)}
             priority
             placeholder="blur"
-            alt="Lorem ipsum dolor"
+            alt="Traditional Japanese cuisine background"
           />
         )}
         {(isMobile || isMobile === undefined) && (
@@ -67,52 +67,73 @@ export default function Hero() {
             fill
             onLoad={() => setLoaded(true)}
             priority
-            alt="Lorem ipsum dolor"
+            alt="Traditional Japanese cuisine background"
           />
         )}
       </motion.div>
-      <div className="container z-10 w-full h-full mx-auto">
-        <div className="grid w-full h-full max-w-full mx-auto md:grid-cols-2">
-          <div className="z-10 flex flex-col self-center justify-between h-full max-w-xs py-8 sm:max-w-sm md:max-w-xl">
-            <div></div>
-            <div>
+      <div className="container z-10 w-full h-full mx-auto px-4">
+        <div className="grid w-full h-full max-w-full mx-auto lg:grid-cols-2">
+          <div className="z-10 flex flex-col self-center justify-center h-full max-w-2xl py-12 md:py-16">
+            <div className="space-y-8">
+              {/* Logo Card with White Background */}
               <Animated
                 type="spring"
-                delay={1.0}
+                delay={0.2}
                 duration={0.8}
                 variant={"top-sm"}
-                className="mb-6"
+                className="inline-block"
               >
-                <Image
-                  src="/YAICHILOGO.png"
-                  alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
-                  width={280}
-                  height={93}
-                  className="w-48 h-auto md:w-64 lg:w-72"
-                  priority
-                />
+                <div className="inline-flex items-center justify-center p-6 md:p-8 bg-white rounded-2xl shadow-2xl backdrop-blur-sm bg-opacity-95">
+                  <Image
+                    src="/YAICHILOGO.png"
+                    alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
+                    width={180}
+                    height={240}
+                    className="w-32 h-auto md:w-40 lg:w-48"
+                    priority
+                  />
+                </div>
               </Animated>
+
+              {/* Main Heading */}
               <Animated
-                as="h1"
+                as="div"
                 delay={0.4}
                 variant={"top-sm"}
-                className="mb-4 heading-first text-neutral-200"
+                className="space-y-4"
               >
-                Savor the Art
-                <br />
-                <span className="text-primary-500">of Japanese Cuisine</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  <span className="text-white">Savor the Art</span>
+                  <br />
+                  <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+                    of Japanese Cuisine
+                  </span>
+                </h1>
+                <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full"></div>
               </Animated>
-              <Animated as="p" delay={0.6} variant="top-sm">
-                Embark on a culinary journey through the heart of Japan with our
-                authentic sushi and ramen dishes. Each bite is a testament to
-                the mastery of traditional techniques and the purity of fresh,
-                locally-sourced ingredients.
+
+              {/* Description */}
+              <Animated
+                as="p"
+                delay={0.6}
+                variant="top-sm"
+                className="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-xl"
+              >
+                Experience authentic Japanese udon and seafood bowls crafted
+                with traditional techniques and the freshest locally-sourced
+                ingredients. Every dish tells a story of culinary excellence.
               </Animated>
-              <Animated delay={0.9} className="flex flex-row flex-wrap gap-4 mt-8">
+
+              {/* CTA Buttons */}
+              <Animated
+                delay={0.8}
+                className="flex flex-row flex-wrap gap-4 pt-4"
+              >
                 <CTAButton
                   href="https://www.toasttab.com/yaichi-placeholder"
                   variant="primary"
                   size="lg"
+                  className="shadow-xl hover:shadow-2xl transition-shadow"
                 >
                   Order Online
                 </CTAButton>
@@ -120,42 +141,37 @@ export default function Hero() {
                   href="https://www.doordash.com/store/yaichi-placeholder"
                   variant="secondary"
                   size="lg"
+                  className="bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all"
                 >
                   Delivery
                 </CTAButton>
               </Animated>
-            </div>
-            <div className="flex flex-row items-center gap-8 left-40 bottom-20">
-              <Animated
-                type="spring"
-                delay={1.2}
-                duration={0.5}
-                variant="top-sm"
-              >
-                <SocialLink variant="facebook" url="https://facebook.com/" />
-              </Animated>
-              <Animated
-                type="spring"
-                delay={1.35}
-                duration={0.5}
-                variant="top-sm"
-              >
-                <SocialLink variant="instagram" url="https://instagram.com/" />
-              </Animated>
-              <Animated
-                type="spring"
-                delay={1.5}
-                duration={0.5}
-                variant="top-sm"
-              >
-                <SocialLink variant="twitter" url="https://twitter.com/" />
-              </Animated>
 
+              {/* Social Links */}
               <Animated
-                variant="left"
-                delay={1.4}
-                className="w-80 h-[1px] bg-neutral-500"
-              ></Animated>
+                delay={1.0}
+                variant="top-sm"
+                className="flex flex-row items-center gap-6 pt-8"
+              >
+                <div className="flex flex-row items-center gap-4">
+                  <SocialLink
+                    variant="facebook"
+                    url="https://facebook.com/"
+                    className="hover:scale-110 transition-transform"
+                  />
+                  <SocialLink
+                    variant="instagram"
+                    url="https://instagram.com/"
+                    className="hover:scale-110 transition-transform"
+                  />
+                  <SocialLink
+                    variant="twitter"
+                    url="https://twitter.com/"
+                    className="hover:scale-110 transition-transform"
+                  />
+                </div>
+                <div className="hidden sm:block w-32 h-[1px] bg-gradient-to-r from-neutral-400 to-transparent"></div>
+              </Animated>
             </div>
           </div>
         </div>
