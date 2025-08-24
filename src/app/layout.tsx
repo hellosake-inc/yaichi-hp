@@ -99,6 +99,23 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
+        {/* Hidden form for Netlify Forms detection - required for Next.js SSR */}
+        <form
+          name="contact"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          hidden
+          style={{ display: 'none' }}
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="bot-field" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="subject" />
+          <textarea name="message" />
+        </form>
+        
         <Header />
         {children}
         <FloatingCTA />
