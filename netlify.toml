@@ -1,0 +1,39 @@
+# Netlify配置ファイル
+
+[build]
+  # ビルドコマンド
+  command = "npm run build"
+  
+  # 公開ディレクトリ
+  publish = ".next"
+
+[build.environment]
+  # Node.jsバージョン指定
+  NODE_VERSION = "18"
+
+# Next.jsのサポートを有効化
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# リダイレクト設定（必要に応じて）
+# [[redirects]]
+#   from = "/old-path"
+#   to = "/new-path"
+#   status = 301
+
+# カスタムヘッダー設定（必要に応じて）
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     X-Frame-Options = "DENY"
+#     X-XSS-Protection = "1; mode=block"
+#     X-Content-Type-Options = "nosniff"
+#     Referrer-Policy = "no-referrer-when-downgrade"
+
+# Netlify Forms通知設定
+# フォーム通知はNetlifyダッシュボードで設定してください
+# Site settings > Forms > Form notifications
+
+# 環境変数（実際の値はNetlifyダッシュボードで設定）
+# [context.production.environment]
+#   NEXT_PUBLIC_SITE_URL = "https://yaichi-restaurant.com"
