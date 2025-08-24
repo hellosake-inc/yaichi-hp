@@ -20,6 +20,7 @@ import Categories from "@/components/layout/Categories";
 import Banner from "@/components/layout/Banner";
 import DividerSharp from "@/components/layout/DividerSharp";
 import PageWrapper from "@/components/layout/PageWrapper";
+import MenuSection from "@/components/layout/MenuSection";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       {/* <div className="relative w-full h-24 -mt-20 rounded-tl-full rounded-tr-full bg-light-ivory"></div> */}
       <Categories pt="xl" />
       <About />
+      <MenuSection />
       <DividerSharp />
       {/* <Banner /> */}
       {/* <Features /> */}

@@ -18,6 +18,7 @@
     "eslint": "8.56.0",
     "eslint-config-next": "^15.5.0",
     "framer-motion": "^12.23.12",
+    "lucide-react": "^0.541.0",
     "next": "^15.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -27,6 +28,7 @@
     "sharp": "^0.34.3",
     "shortid": "^2.2.16",
     "swiper": "^11.0.5",
+    "xlsx": "^0.18.5",
     "zustand": "^4.5.0"
   },
   "devDependencies": {

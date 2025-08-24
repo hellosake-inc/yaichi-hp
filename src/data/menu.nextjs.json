@@ -1,0 +1,262 @@
+{
+  "Appetizers": [
+    {
+      "name": "Fried Japanese Yam (Choice of Curry, Salt, or Truffle)",
+      "price": 8.5
+    },
+    {
+      "name": "Lightly Pickled Napa Cabbage",
+      "price": 6.0
+    },
+    {
+      "name": "Deep-Fried Octopus Skewer 1 pieces",
+      "price": 4.0
+    },
+    {
+      "name": "Mary's Chicken Wings Nagoya-Style 3 pieces",
+      "price": 11.0
+    },
+    {
+      "name": "Fried Takoyaki (Octopus Balls) 3 pieces",
+      "price": 6.0
+    },
+    {
+      "name": "Shishito Peppers with Yuzu Miso",
+      "price": 7.0
+    },
+    {
+      "name": "Edamame (Steamed Soybeans)",
+      "price": 6.0
+    },
+    {
+      "name": "DIY Potato Salad",
+      "price": 8.5
+    }
+  ],
+  "Seafood Bowls (All served with Minced tuna Hokkaido Scallop, Tobiko, and Snow Crab)": [
+    {
+      "name": "UME* –  Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
+      "price": 26.0
+    },
+    {
+      "name": "TAKE* – Marinated Hokkaido Salmon Roe*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
+      "price": 32.0
+    },
+    {
+      "name": "MATSU*– Marinated Hokkaido Salmon Roe*, Hokkaido Sea Urchin*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
+      "price": 41.0
+    }
+  ],
+  "Seafood Bowl Side Options": [
+    {
+      "name": "Extra Hokkaido Sea Urchin*",
+      "price": 14.0
+    },
+    {
+      "name": "Extra  hHokkaido Salmon Roe*",
+      "price": 12.0
+    },
+    {
+      "name": "Extra Snow Crab",
+      "price": 12.0
+    },
+    {
+      "name": "Soft-Boiled Egg*",
+      "price": 3.0
+    },
+    {
+      "name": "Nori Seaweed",
+      "price": 1.5
+    },
+    {
+      "name": "Grated Yam with Dashi Broth",
+      "price": 4.0
+    },
+    {
+      "name": "Aosa Seaweed Soup",
+      "price": 3.0
+    },
+    {
+      "name": "Ochazuke set",
+      "price": 3.0
+    },
+    {
+      "name": "Small Negitoro Bowl*",
+      "price": 12.0
+    }
+  ],
+  "Udon (Japanese Wheat Noodles)": {
+    "Hot Udon": [
+      {
+        "name": "- Kake Udon: Wakame Seaweed, Kamaboko (Fish Cake), Green Onion, Yuzu Citrus",
+        "price": 16.0
+      },
+      {
+        "name": "- Shabu-Shabu Beef Udon: American Wagyu Beef (Choice of Short Plate or Chuck Flap), Soft-Boiled Egg*, Wakame, Fried Burdock, Yuzu",
+        "price": 22.5
+      },
+      {
+        "name": "- Sukiyaki Beef Udon: American Wagyu Beef (Choice of Short brisket or Zabuton), Soft-Boiled Egg*, Bok Choy",
+        "price": 22.5
+      },
+      {
+        "name": "- Curry Udon: American Wagyu Beef (Choice of Short Plate or Zabuton), Potato, Bok Choy",
+        "price": 22.5
+      },
+      {
+        "name": "- Plum Udon: Plum, Bonito Flakes, Tororo Kombu, Wakame, Bok Choy",
+        "price": 18.0
+      },
+      {
+        "name": "- Creamy Sea Urchin Udon: Sea Urchin*, Bok Choy, soft boiled Egg*, shiso leaf, nori seaweed",
+        "price": 24.5
+      },
+      {
+        "name": "- Creamy Mentaiko Udon: Spicy Cod Roe, Shiso Leaf, Nori Seaweed soft boiled egg",
+        "price": 19.5
+      }
+    ],
+    "Cold Udon": [
+      {
+        "name": "- Chilled Katsuobushi Dashi Udon: sesame, katsuodashi dipping sauce",
+        "price": 14.0
+      },
+      {
+        "name": "- Citrus 'Bukkake' Udon:Grated Daikon, shiso leaf, green onion lemon, Citrus sauce",
+        "price": 16.0
+      },
+      {
+        "name": "- Sesame Sauce Udon: Bok Choy, Green onion, sesame dipping sauce",
+        "price": 15.0
+      },
+      {
+        "name": "- 'Bukkake' Udon: Grated Daikon, Shiso Leaf, Sesame Seeds, Tempura Bits, Green Onion",
+        "price": 16.0
+      }
+    ],
+    "Udon Side Options": [
+      {
+        "name": "Tempura (Sweet Potato x2, Pumpkin x2, Shishito x4, Shiitake x2, Maitake x1, Soft-Boiled Egg* x1, Squid x1, Jumbo Shrimp x1)",
+        "price": 0.0
+      },
+      {
+        "name": "American Wagyu Beef 3.5oz(Choice of Short Plate or Zabuton)",
+        "price": 7.0
+      },
+      {
+        "name": "Soft-Boiled Egg*",
+        "price": 3.0
+      },
+      {
+        "name": "Bok Choy",
+        "price": 1.5
+      },
+      {
+        "name": "Kamaboko (Fish Cake)",
+        "price": 2.5
+      },
+      {
+        "name": "Fried Burdock",
+        "price": 1.5
+      },
+      {
+        "name": "Plum paste",
+        "price": 1.5
+      },
+      {
+        "name": "Tororo Kombu (Shaved Kelp)",
+        "price": 2.5
+      },
+      {
+        "name": "Wakame Seaweed",
+        "price": 1.0
+      },
+      {
+        "name": "Grated Yam with Dashi Broth",
+        "price": 4.0
+      },
+      {
+        "name": "Small Udon",
+        "price": 7.0
+      }
+    ]
+  },
+  "Desserts": [
+    {
+      "name": "Japanese Churros w/green tea ice",
+      "price": 8.5
+    },
+    {
+      "name": "Matcha Green Tea Ice Cream",
+      "price": 5.5
+    },
+    {
+      "name": "Seasonal Sorbet",
+      "price": 5.5
+    }
+  ],
+  "Drink": {
+    "alcohol": [
+      {
+        "name": "Tap beer",
+        "price": 9.0
+      },
+      {
+        "name": "Maccha IPA",
+        "price": 12.5
+      },
+      {
+        "name": "House red wine",
+        "price": 9.0
+      },
+      {
+        "name": "House white wine",
+        "price": 9.0
+      },
+      {
+        "name": "Japanese Plum wine",
+        "price": 9.0
+      }
+    ],
+    "sake": [
+      {
+        "name": "Keigetsu cel24  300ml",
+        "price": 21.0
+      },
+      {
+        "name": "Keigetsu nigori 300ml",
+        "price": 21.0
+      },
+      {
+        "name": "Nanbubizin 300ml",
+        "price": 24.0
+      },
+      {
+        "name": "Hakkaisan JD 300ml",
+        "price": 33.0
+      },
+      {
+        "name": "Hakkaisan TJG 30ml",
+        "price": 21.0
+      }
+    ],
+    "Non-alcohol": [
+      {
+        "name": "coke",
+        "price": 3.0
+      },
+      {
+        "name": "diet coke",
+        "price": 3.0
+      },
+      {
+        "name": "Ramune(Japanese sprite)",
+        "price": 4.0
+      },
+      {
+        "name": "Houjicha  (Hot) free refill",
+        "price": 2.5
+      }
+    ]
+  }
+}
