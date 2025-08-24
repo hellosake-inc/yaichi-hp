@@ -27,13 +27,13 @@ export default function Home() {
     <PageWrapper className="overflow-x-hidden">
       <Hero />
       {/* <div className="relative w-full h-24 -mt-20 rounded-tl-full rounded-tr-full bg-light-ivory"></div> */}
-      <Categories pt="xl" />
+      {/* <Categories pt="xl" /> */}
       <About />
       <MenuSection />
       <DividerSharp />
       {/* <Banner /> */}
       {/* <Features /> */}
-      <Products />
+      {/* <Products /> */}
       <Contact />
       <Footer />
     </PageWrapper>
