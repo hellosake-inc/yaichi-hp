@@ -16,7 +16,7 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitMessage("");
 
-        const formData = new FormData(e.currentTarget);
+    const formData = new FormData(e.currentTarget);
 
     try {
       const response = await fetch("/", {
