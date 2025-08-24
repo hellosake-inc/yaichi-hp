@@ -4,6 +4,7 @@ import SocialLink from "../ui/SocialLink";
 import Link from "next/link";
 import ScrollAnimated from "./ScrollAnimated";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { STORE_INFO } from "@/constants/storeInfo";
 
 export default function Contact() {
   const isMobile = useMediaQuery(`(max-width: 768px)`);
@@ -42,13 +43,10 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-2 text-center lg:text-left">
                   <span className="truncate w-72 text-gray-600">
-                    1234 Ipsum Street
+                    {STORE_INFO.address.street}
                   </span>
                   <span className="truncate w-72 text-gray-600">
-                    Loremville, Ipsumia 56789
-                  </span>
-                  <span className="truncate w-72 text-gray-600">
-                    Consectetur Adipiscing Elite.
+                    {STORE_INFO.address.city}, {STORE_INFO.address.state} {STORE_INFO.address.zip}
                   </span>
                 </div>
               </div>
@@ -70,9 +68,9 @@ export default function Contact() {
                 </svg>
                 <Link
                   className="truncate text-gray-600"
-                  href={"tel:1234567890"}
+                  href={`tel:${STORE_INFO.phone.replace(/[^0-9]/g, '')}`}
                 >
-                  (123) 456-7890
+                  {STORE_INFO.phone}
                 </Link>
               </div>
 
@@ -94,9 +92,9 @@ export default function Contact() {
 
                 <Link
                   className="truncate w-fit text-gray-600"
-                  href={"mailto:contact@loremipsum.com"}
+                  href={`mailto:${STORE_INFO.email}`}
                 >
-                  contact@loremipsum.com
+                  {STORE_INFO.email}
                 </Link>
               </div>
             </address>
@@ -106,9 +104,9 @@ export default function Contact() {
                 Follow us
               </p>
               <div className="flex items-center justify-center gap-2 lg:justify-start">
-                <SocialLink variant="facebook" url="https://facebook.com/" />
-                <SocialLink variant="instagram" url="https://instagram.com/" />
-                <SocialLink variant="twitter" url="https://twitter.com/" />
+                <SocialLink variant="facebook" url={STORE_INFO.social.facebook} />
+                <SocialLink variant="instagram" url={STORE_INFO.social.instagram} />
+                <SocialLink variant="twitter" url={STORE_INFO.social.twitter} />
               </div>
             </section>
           </div>
@@ -117,7 +115,7 @@ export default function Contact() {
             <div className="mt-8 lg:w-1/2 lg:mx-6">
               <iframe
                 className="w-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5990.566373508373!2d14.543439619481877!3d53.42631447644446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa093800d3a759%3A0xa95adc4e5f8ac4f3!2sSzczecin!5e0!3m2!1spl!2spl!4v1705360290393!5m2!1spl!2spl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.0255!2d-121.8995!3d37.4323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc9aaa32e848d%3A0x6d4c5c5c5c5c5c5c!2sMilpitas%2C+CA!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus"
                 width="800"
                 height="600"
                 style={{ border: 0 }}
