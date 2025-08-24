@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import SocialLink from "../ui/SocialLink";
 import Link from "next/link";
 import ScrollAnimated from "./ScrollAnimated";
@@ -8,10 +8,159 @@ import { STORE_INFO } from "@/constants/storeInfo";
 
 export default function Contact() {
   const isMobile = useMediaQuery(`(max-width: 768px)`);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitMessage(
+          "Thank you for your message! We'll get back to you soon."
+        );
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitMessage("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setSubmitMessage("Something went wrong. Please try again.");
+    }
+
+    setIsSubmitting(false);
+  };
 
   return (
     <section id="Contact" className="bg-gray-50 py-section">
       <ScrollAnimated className="container container--sm">
+        {/* Contact Form Section */}
+        <div className="mb-16">
+          <h2 className="text-center text-gray-800 heading-second mb-8">
+            <span className="text-primary-600">Get in Touch</span>
+          </h2>
+
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            className="max-w-2xl mx-auto"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+
+            {/* Honeypot field for spam protection */}
+            <div className="hidden">
+              <label>
+                Don&apos;t fill this out if you&apos;re human:{" "}
+                <input name="bot-field" />
+              </label>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                placeholder="(408) 123-4567"
+              />
+            </div>
+
+            <div className="mb-6">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Message *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                placeholder="How can we help you?"
+              />
+            </div>
+
+            <div className="text-center">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="px-8 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
+            </div>
+
+            {submitMessage && (
+              <div
+                className={`mt-4 p-4 rounded-lg text-center ${
+                  submitMessage.includes("Thank you")
+                    ? "bg-green-100 text-green-700"
+                    : "bg-red-100 text-red-700"
+                }`}
+              >
+                {submitMessage}
+              </div>
+            )}
+          </form>
+        </div>
+
+        {/* Contact Information Section */}
         <div className="lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2 lg:mx-6">
             <h2 className="text-center lg:text-left text-gray-800 heading-second">
@@ -46,7 +195,8 @@ export default function Contact() {
                     {STORE_INFO.address.street}
                   </span>
                   <span className="truncate w-72 text-gray-600">
-                    {STORE_INFO.address.city}, {STORE_INFO.address.state} {STORE_INFO.address.zip}
+                    {STORE_INFO.address.city}, {STORE_INFO.address.state}{" "}
+                    {STORE_INFO.address.zip}
                   </span>
                 </div>
               </div>
@@ -68,7 +218,7 @@ export default function Contact() {
                 </svg>
                 <Link
                   className="truncate text-gray-600"
-                  href={`tel:${STORE_INFO.phone.replace(/[^0-9]/g, '')}`}
+                  href={`tel:${STORE_INFO.phone.replace(/[^0-9]/g, "")}`}
                 >
                   {STORE_INFO.phone}
                 </Link>
@@ -104,8 +254,14 @@ export default function Contact() {
                 Follow us
               </p>
               <div className="flex items-center justify-center gap-2 lg:justify-start">
-                <SocialLink variant="facebook" url={STORE_INFO.social.facebook} />
-                <SocialLink variant="instagram" url={STORE_INFO.social.instagram} />
+                <SocialLink
+                  variant="facebook"
+                  url={STORE_INFO.social.facebook}
+                />
+                <SocialLink
+                  variant="instagram"
+                  url={STORE_INFO.social.instagram}
+                />
                 <SocialLink variant="twitter" url={STORE_INFO.social.twitter} />
               </div>
             </section>

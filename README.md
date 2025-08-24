@@ -31,8 +31,43 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured for deployment on Netlify with built-in form handling.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Deployment Steps
+
+1. **Push to GitHub**: Ensure your code is pushed to a GitHub repository.
+
+2. **Connect to Netlify**: 
+   - Log in to [Netlify](https://www.netlify.com/)
+   - Click "Add new site" → "Import an existing project"
+   - Choose your GitHub repository
+
+3. **Configure Build Settings**:
+   - Build command: `npm run build` (already configured in `netlify.toml`)
+   - Publish directory: `.next` (already configured in `netlify.toml`)
+
+4. **Deploy**: Click "Deploy site"
+
+### Netlify Forms Configuration
+
+The contact form is already configured to work with Netlify Forms:
+- Form submissions will be available in your Netlify dashboard
+- Configure email notifications in: Site settings → Forms → Form notifications
+- Set the notification email to: `nkfoodmilpitas@gmail.com`
+
+### Environment Variables
+
+If needed, add environment variables in Netlify:
+- Go to Site settings → Environment variables
+- Add any required variables
+
+### Custom Domain
+
+To add a custom domain:
+1. Go to Site settings → Domain management
+2. Add your custom domain
+3. Follow the DNS configuration instructions
+
+For more details, check out the [Netlify Next.js documentation](https://docs.netlify.com/integrations/frameworks/next-js/overview/).
