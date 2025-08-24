@@ -17,9 +17,12 @@ export default function Contact() {
     setSubmitMessage("");
 
     const formData = new FormData(e.currentTarget);
+    
+    // Ensure form-name field is set correctly for Netlify Forms v5
+    formData.append("form-name", "contact");
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
@@ -52,8 +55,6 @@ export default function Contact() {
           <form
             name="contact"
             method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             className="max-w-2xl mx-auto"
           >
