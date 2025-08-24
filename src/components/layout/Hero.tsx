@@ -154,21 +154,12 @@ export default function Hero() {
                 className="flex flex-row items-center gap-6 pt-8"
               >
                 <div className="flex flex-row items-center gap-4">
-                  <SocialLink
-                    variant="facebook"
-                    url="https://facebook.com/"
-                    className="hover:scale-110 transition-transform"
-                  />
+                  <SocialLink variant="facebook" url="https://facebook.com/" />
                   <SocialLink
                     variant="instagram"
                     url="https://instagram.com/"
-                    className="hover:scale-110 transition-transform"
                   />
-                  <SocialLink
-                    variant="twitter"
-                    url="https://twitter.com/"
-                    className="hover:scale-110 transition-transform"
-                  />
+                  <SocialLink variant="twitter" url="https://twitter.com/" />
                 </div>
                 <div className="hidden sm:block w-32 h-[1px] bg-gradient-to-r from-neutral-400 to-transparent"></div>
               </Animated>
