@@ -5,7 +5,7 @@ import { STORE_INFO } from "@/constants/storeInfo";
 
 const links = [
   { id: 0, title: "Home", path: "/" },
-  { id: 1, title: "About", path: "/about" },
+  // { id: 1, title: "About", path: "/about" },
   { id: 2, title: "Contact", path: "/contact" },
 ];
 
