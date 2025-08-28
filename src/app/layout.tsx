@@ -102,9 +102,11 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <StructuredData />
+        {/* Preload the contact form HTML for Netlify Forms */}
+        <link rel="preload" href="/contact-form.html" as="document" />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
-        {/* Hidden form for Netlify Forms detection - required for Next.js SSR */}
+        {/* Hidden form for Netlify Forms detection - required for Next.js runtime v5 */}
         <form
           name="contact"
           data-netlify="true"
@@ -117,7 +119,6 @@ export default function RootLayout({
           <input type="text" name="name" />
           <input type="email" name="email" />
           <input type="tel" name="phone" />
-          <input type="text" name="subject" />
           <textarea name="message" />
         </form>
 
