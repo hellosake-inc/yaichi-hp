@@ -20,22 +20,24 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Yaichi - Authentic Japanese Udon & Seafood | Milpitas, CA",
+  title: "Yaichi (+81) - Authentic Japanese Udon & Seafood | Milpitas, CA",
   description:
-    "Experience authentic Japanese udon and fresh seafood at Yaichi in Milpitas. Traditional flavors, modern atmosphere. Order online or visit us today!",
+    "Your +81 connection to authentic Japan. Experience handcrafted udon noodles and Hokkaido seafood bowls at Yaichi in Milpitas. Soul-warming dashi broth, house-made sauces, and genuine Japanese flavors. Order online or visit us today!",
   keywords: [
     "Japanese restaurant",
     "udon",
     "seafood",
     "Milpitas restaurant",
     "authentic Japanese food",
-    "sushi",
-    "ramen",
+    "handmade udon",
+    "dashi broth",
+    "Hokkaido seafood",
     "Japanese cuisine",
     "Bay Area Japanese restaurant",
     "Milpitas dining",
     "online ordering",
     "DoorDash delivery",
+    "668 Barber Lane",
   ],
   authors: [{ name: STORE_INFO.name }],
   creator: STORE_INFO.name,

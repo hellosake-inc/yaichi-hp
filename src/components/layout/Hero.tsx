@@ -8,6 +8,7 @@ import Animated from "./Animated";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import clsx from "clsx";
 import CTAButton from "../ui/CTAButton";
+import { STORE_INFO } from "@/constants/storeInfo";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
@@ -103,10 +104,10 @@ export default function Hero() {
                 className="space-y-4"
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-white">Savor the Art</span>
+                  <span className="text-white">Your +81 Connection</span>
                   <br />
                   <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-                    of Japanese Cuisine
+                    to Authentic Japan
                   </span>
                 </h1>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full"></div>
@@ -119,9 +120,9 @@ export default function Hero() {
                 variant="top-sm"
                 className="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-xl"
               >
-                Experience authentic Japanese udon and seafood bowls crafted
-                with traditional techniques and the freshest locally-sourced
-                ingredients. Every dish tells a story of culinary excellence.
+                Just as dialing +81 connects you to Japan, we bring genuine Japanese 
+                taste directly to your table. Handcrafted udon noodles, soul-warming 
+                dashi broth, and treasures from Hokkaido's waters await.
               </Animated>
 
               {/* CTA Buttons */}
@@ -154,12 +155,10 @@ export default function Hero() {
                 className="flex flex-row items-center gap-6 pt-8"
               >
                 <div className="flex flex-row items-center gap-4">
-                  <SocialLink variant="facebook" url="https://facebook.com/" />
                   <SocialLink
                     variant="instagram"
-                    url="https://instagram.com/"
+                    url={STORE_INFO.social.instagram}
                   />
-                  <SocialLink variant="twitter" url="https://twitter.com/" />
                 </div>
                 <div className="hidden sm:block w-32 h-[1px] bg-gradient-to-r from-neutral-400 to-transparent"></div>
               </Animated>

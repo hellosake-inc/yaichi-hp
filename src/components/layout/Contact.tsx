@@ -115,7 +115,7 @@ export default function Contact() {
                 id="phone"
                 name="phone"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                placeholder="(408) 123-4567"
+                placeholder="(408) 649-3305"
               />
             </div>
 
@@ -255,14 +255,9 @@ export default function Contact() {
               </p>
               <div className="flex items-center justify-center gap-2 lg:justify-start">
                 <SocialLink
-                  variant="facebook"
-                  url={STORE_INFO.social.facebook}
-                />
-                <SocialLink
                   variant="instagram"
                   url={STORE_INFO.social.instagram}
                 />
-                <SocialLink variant="twitter" url={STORE_INFO.social.twitter} />
               </div>
             </section>
           </div>
@@ -271,7 +266,7 @@ export default function Contact() {
             <div className="mt-8 lg:w-1/2 lg:mx-6">
               <iframe
                 className="w-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.0255!2d-121.8995!3d37.4323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc9aaa32e848d%3A0x6d4c5c5c5c5c5c5c!2sMilpitas%2C+CA!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.547594402587!2d-121.90503562373056!3d37.42414407206525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc9d5b3a8fb11%3A0x8e53d7eb8a890414!2s668%20Barber%20Ln%2C%20Milpitas%2C%20CA%2095035!5e0!3m2!1sen!2sus!4v1706648975000!5m2!1sen!2sus"
                 width="800"
                 height="600"
                 style={{ border: 0 }}
