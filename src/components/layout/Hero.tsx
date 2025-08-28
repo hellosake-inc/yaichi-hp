@@ -72,10 +72,10 @@ export default function Hero() {
           />
         )}
       </motion.div>
-      <div className="container z-10 w-full h-full mx-auto px-4">
-        <div className="grid w-full h-full max-w-full mx-auto lg:grid-cols-2">
-          <div className="z-10 flex flex-col self-center justify-center h-full max-w-2xl py-12 md:py-16 mt-20 md:mt-24">
-            <div className="space-y-8">
+      <div className="container z-10 w-full min-h-screen mx-auto px-4">
+        <div className="grid w-full min-h-screen max-w-full mx-auto lg:grid-cols-2">
+          <div className="z-10 flex flex-col self-center justify-start sm:justify-center min-h-screen max-w-2xl py-8 sm:py-12 md:py-16 pt-24 sm:pt-20 md:pt-0 md:mt-24">
+            <div className="space-y-4 sm:space-y-6 md:space-y-8">
               {/* Logo Card with White Background */}
               <Animated
                 type="spring"
@@ -84,13 +84,13 @@ export default function Hero() {
                 variant={"top-sm"}
                 className="inline-block"
               >
-                <div className="inline-flex items-center justify-center p-6 md:p-8 bg-white rounded-2xl shadow-2xl backdrop-blur-sm bg-opacity-95">
+                <div className="inline-flex items-center justify-center p-4 sm:p-6 md:p-8 bg-white rounded-2xl shadow-2xl backdrop-blur-sm bg-opacity-95">
                   <Image
                     src="/YAICHILOGO.png"
                     alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
                     width={180}
                     height={240}
-                    className="w-32 h-auto md:w-40 lg:w-48"
+                    className="w-24 sm:w-32 md:w-40 lg:w-48 h-auto"
                     priority
                   />
                 </div>
@@ -103,7 +103,7 @@ export default function Hero() {
                 variant={"top-sm"}
                 className="space-y-4"
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-white">Your Connection</span>
                   <br />
                   <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
@@ -118,18 +118,17 @@ export default function Hero() {
                 as="p"
                 delay={0.6}
                 variant="top-sm"
-                className="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg md:text-xl text-neutral-200 leading-relaxed max-w-xl"
               >
-                Yaichi (+81) - Japan&apos;s country code. Just as dialing +81 connects you 
-                to Japan, we bring genuine Japanese taste directly to your table. 
-                Handcrafted udon noodles, soul-warming dashi broth, and treasures from 
-                Hokkaido&apos;s waters await.
+                Yaichi (+81) - Japan&apos;s country code. We bring genuine Japanese taste 
+                directly to your table. Handcrafted udon noodles and soul-warming dashi 
+                broth await.
               </Animated>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons - Hidden on Mobile */}
               <Animated
                 delay={0.8}
-                className="flex flex-row flex-wrap gap-4 pt-4"
+                className="hidden md:flex flex-row flex-wrap gap-4 pt-4"
               >
                 <CTAButton
                   href="https://www.toasttab.com/yaichi-placeholder"
