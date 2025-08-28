@@ -122,7 +122,7 @@ export default function Hero() {
               >
                 Just as dialing +81 connects you to Japan, we bring genuine Japanese 
                 taste directly to your table. Handcrafted udon noodles, soul-warming 
-                dashi broth, and treasures from Hokkaido's waters await.
+                dashi broth, and treasures from Hokkaido&apos;s waters await.
               </Animated>
 
               {/* CTA Buttons */}
