@@ -74,7 +74,7 @@ export default function Hero() {
       </motion.div>
       <div className="container z-10 w-full h-full mx-auto px-4">
         <div className="grid w-full h-full max-w-full mx-auto lg:grid-cols-2">
-          <div className="z-10 flex flex-col self-center justify-center h-full max-w-2xl py-12 md:py-16">
+          <div className="z-10 flex flex-col self-center justify-center h-full max-w-2xl py-12 md:py-16 mt-20 md:mt-24">
             <div className="space-y-8">
               {/* Logo Card with White Background */}
               <Animated
