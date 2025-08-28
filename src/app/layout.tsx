@@ -20,9 +20,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Yaichi (+81) - Authentic Japanese Udon & Seafood | Milpitas, CA",
+  title: "Yaichi - Authentic Japanese Udon & Seafood | Milpitas, CA",
   description:
-    "Your +81 connection to authentic Japan. Experience handcrafted udon noodles and Hokkaido seafood bowls at Yaichi in Milpitas. Soul-warming dashi broth, house-made sauces, and genuine Japanese flavors. Order online or visit us today!",
+    "Yaichi (+81) - Japan's country code, your connection to authentic Japan. Experience handcrafted udon noodles and Hokkaido seafood bowls in Milpitas. Soul-warming dashi broth, house-made sauces, and genuine Japanese flavors. Order online or visit us today!",
   keywords: [
     "Japanese restaurant",
     "udon",

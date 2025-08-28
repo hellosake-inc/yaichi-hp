@@ -104,7 +104,7 @@ export default function Hero() {
                 className="space-y-4"
               >
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-white">Your +81 Connection</span>
+                  <span className="text-white">Your Connection</span>
                   <br />
                   <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
                     to Authentic Japan
@@ -120,9 +120,10 @@ export default function Hero() {
                 variant="top-sm"
                 className="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-xl"
               >
-                Just as dialing +81 connects you to Japan, we bring genuine Japanese 
-                taste directly to your table. Handcrafted udon noodles, soul-warming 
-                dashi broth, and treasures from Hokkaido&apos;s waters await.
+                Yaichi (+81) - Japan&apos;s country code. Just as dialing +81 connects you 
+                to Japan, we bring genuine Japanese taste directly to your table. 
+                Handcrafted udon noodles, soul-warming dashi broth, and treasures from 
+                Hokkaido&apos;s waters await.
               </Animated>
 
               {/* CTA Buttons */}
