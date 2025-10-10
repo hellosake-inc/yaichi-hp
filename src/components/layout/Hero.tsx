@@ -27,12 +27,14 @@ export default function Hero() {
     hidden: { opacity: 0 },
   };
 
+  const mobileHeight = "h-[80vh]";
+
   return (
     <section
       id="Hero"
       className={clsx(
         "relative w-full bg-right bg-no-repeat bg-cover bg-neutral-900",
-        isMobile ? "h-[70vh]" : "h-screen"
+        isMobile ? mobileHeight : "h-screen"
       )}
       style={{
         backgroundImage: `linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))`,
@@ -42,7 +44,7 @@ export default function Hero() {
         className={clsx(
           "absolute top-0 left-0 z-10 w-full",
           isMobile
-            ? "bg-gradient-to-r from-neutral-900/80 to-neutral-900/40 h-[70vh]"
+            ? `bg-gradient-to-r from-neutral-900/80 to-neutral-900/40 ${mobileHeight}`
             : "bg-gradient-to-r from-neutral-900/90 via-neutral-900/60 to-transparent h-full"
         )}
       ></div>
@@ -64,7 +66,7 @@ export default function Hero() {
           />
         ) : (
           <Image
-            className="absolute top-0 left-0 object-cover object-left w-full transition z-1 h-[70vh]"
+            className={`absolute top-0 left-0 object-cover object-left w-full transition z-1 ${mobileHeight}`}
             src={bgSp}
             onLoad={() => setLoaded(true)}
             priority
