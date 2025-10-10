@@ -19,11 +19,24 @@ const formatPrice = (price: number | null) => {
 };
 
 const MenuItemCard = ({ item }: { item: MenuItem }) => (
-  <div className="flex justify-between items-start py-2 border-b border-green-200/30 last:border-0">
-    <span className="text-gray-700 text-sm pr-2 flex-1">{item.name}</span>
-    <span className="text-gray-900 font-medium text-sm whitespace-nowrap">
-      {formatPrice(item.price)}
-    </span>
+  <div className="flex items-start gap-3 py-2 border-b border-green-200/30 last:border-0">
+    {item.image && (
+      <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden">
+        <Image
+          src={item.image}
+          alt={item.name}
+          fill
+          className="object-cover"
+          sizes="64px"
+        />
+      </div>
+    )}
+    <div className="flex justify-between items-start flex-1 min-w-0">
+      <span className="text-gray-700 text-sm pr-2 flex-1">{item.name}</span>
+      <span className="text-gray-900 font-medium text-sm whitespace-nowrap">
+        {formatPrice(item.price)}
+      </span>
+    </div>
   </div>
 );
 

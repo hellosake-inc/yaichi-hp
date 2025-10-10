@@ -1,6 +1,7 @@
 export type MenuItem = {
   name: string;
   price: number | null;
+  image?: string;
 };
 
 export type MenuGroup = Record<string, MenuItem[]>;

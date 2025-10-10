@@ -1,31 +1,36 @@
 {
   "Appetizers": [
     {
+      "name": "Shishito Peppers with Yuzu Miso",
+      "price": 7.0,
+      "image": "/menu-items/shishito.avif"
+    },
+    {
+      "name": "Edamame (Steamed Soybeans)",
+      "price": 6.0,
+      "image": "/menu-items/edamame.avif"
+    },
+    {
+      "name": "Deep-Fried Octopus Skewer 1 pieces",
+      "price": 4.0,
+      "image": "/menu-items/deep-fried-octopus.avif"
+    },
+    {
+      "name": "Mary's Chicken Wings Nagoya-Style 3 pieces",
+      "price": 11.0,
+      "image": "/menu-items/chicken-wings.avif"
+    },
+    {
+      "name": "Fried Takoyaki (Octopus Balls) 3 pieces",
+      "price": 6.0,
+      "image": "/menu-items/takoyaki.avif"
+    },
+    {
       "name": "Fried Japanese Yam (Choice of Curry, Salt, or Truffle)",
       "price": 8.5
     },
     {
       "name": "Lightly Pickled Napa Cabbage",
-      "price": 6.0
-    },
-    {
-      "name": "Deep-Fried Octopus Skewer 1 pieces",
-      "price": 4.0
-    },
-    {
-      "name": "Mary's Chicken Wings Nagoya-Style 3 pieces",
-      "price": 11.0
-    },
-    {
-      "name": "Fried Takoyaki (Octopus Balls) 3 pieces",
-      "price": 6.0
-    },
-    {
-      "name": "Shishito Peppers with Yuzu Miso",
-      "price": 7.0
-    },
-    {
-      "name": "Edamame (Steamed Soybeans)",
       "price": 6.0
     },
     {
@@ -36,15 +41,18 @@
   "Seafood Bowls (All served with Minced tuna Hokkaido Scallop, Tobiko, and Snow Crab)": [
     {
       "name": "UME* –  Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
-      "price": 26.0
+      "price": 26.0,
+      "image": "/menu-items/ume.avif"
     },
     {
       "name": "TAKE* – Marinated Hokkaido Salmon Roe*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
-      "price": 32.0
+      "price": 32.0,
+      "image": "/menu-items/take.avif"
     },
     {
       "name": "MATSU*– Marinated Hokkaido Salmon Roe*, Hokkaido Sea Urchin*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
-      "price": 41.0
+      "price": 41.0,
+      "image": "/menu-items/matsu.avif"
     }
   ],
   "Seafood Bowl Side Options": [
@@ -88,49 +96,55 @@
   "Udon (Japanese Wheat Noodles)": {
     "Hot Udon": [
       {
-        "name": "- Kake Udon: Wakame Seaweed, Kamaboko (Fish Cake), Green Onion, Yuzu Citrus",
-        "price": 16.0
+        "name": "Kake Udon: Wakame Seaweed, Kamaboko (Fish Cake), Green Onion, Yuzu Citrus",
+        "price": 16.0,
+        "image": "/menu-items/kake-udon.avif"
       },
       {
-        "name": "- Shabu-Shabu Beef Udon: American Wagyu Beef (Choice of Short Plate or Chuck Flap), Soft-Boiled Egg*, Wakame, Fried Burdock, Yuzu",
-        "price": 22.5
+        "name": "Shabu-Shabu Beef Udon: American Wagyu Beef (Choice of Short Plate or Chuck Flap), Soft-Boiled Egg*, Wakame, Fried Burdock, Yuzu",
+        "price": 22.5,
+        "image": "/menu-items/shabushabu-udon.avif"
       },
       {
-        "name": "- Sukiyaki Beef Udon: American Wagyu Beef (Choice of Short brisket or Zabuton), Soft-Boiled Egg*, Bok Choy",
-        "price": 22.5
+        "name": "Sukiyaki Beef Udon: American Wagyu Beef (Choice of Short brisket or Zabuton), Soft-Boiled Egg*, Bok Choy",
+        "price": 22.5,
+        "image": "/menu-items/sukiyaki-udon.avif"
       },
       {
-        "name": "- Curry Udon: American Wagyu Beef (Choice of Short Plate or Zabuton), Potato, Bok Choy",
-        "price": 22.5
+        "name": "Curry Udon: American Wagyu Beef (Choice of Short Plate or Zabuton), Potato, Bok Choy",
+        "price": 22.5,
+        "image": "/menu-items/curry-udon.avif"
       },
       {
-        "name": "- Plum Udon: Plum, Bonito Flakes, Tororo Kombu, Wakame, Bok Choy",
-        "price": 18.0
+        "name": "Plum Udon: Plum, Bonito Flakes, Tororo Kombu, Wakame, Bok Choy",
+        "price": 18.0,
+        "image": "/menu-items/plum-udon.avif"
       },
       {
-        "name": "- Creamy Sea Urchin Udon: Sea Urchin*, Bok Choy, soft boiled Egg*, shiso leaf, nori seaweed",
+        "name": "Creamy Sea Urchin Udon: Sea Urchin*, Bok Choy, soft boiled Egg*, shiso leaf, nori seaweed",
         "price": 24.5
       },
       {
-        "name": "- Creamy Mentaiko Udon: Spicy Cod Roe, Shiso Leaf, Nori Seaweed soft boiled egg",
-        "price": 19.5
+        "name": "Creamy Mentaiko Udon: Spicy Cod Roe, Shiso Leaf, Nori Seaweed soft boiled egg",
+        "price": 19.5,
+        "image": "/menu-items/mentai-udon.avif"
       }
     ],
     "Cold Udon": [
       {
-        "name": "- Chilled Katsuobushi Dashi Udon: sesame, katsuodashi dipping sauce",
+        "name": "Chilled Katsuobushi Dashi Udon: sesame, katsuodashi dipping sauce",
         "price": 14.0
       },
       {
-        "name": "- Citrus 'Bukkake' Udon:Grated Daikon, shiso leaf, green onion lemon, Citrus sauce",
+        "name": "Citrus 'Bukkake' Udon:Grated Daikon, shiso leaf, green onion lemon, Citrus sauce",
         "price": 16.0
       },
       {
-        "name": "- Sesame Sauce Udon: Bok Choy, Green onion, sesame dipping sauce",
+        "name": "Sesame Sauce Udon: Bok Choy, Green onion, sesame dipping sauce",
         "price": 15.0
       },
       {
-        "name": "- 'Bukkake' Udon: Grated Daikon, Shiso Leaf, Sesame Seeds, Tempura Bits, Green Onion",
+        "name": "'Bukkake' Udon: Grated Daikon, Shiso Leaf, Sesame Seeds, Tempura Bits, Green Onion",
         "price": 16.0
       }
     ],
