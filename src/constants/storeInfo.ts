@@ -18,8 +18,13 @@ export const STORE_INFO = {
   phone: "(408) 649-3305",
   email: "nkfoodmilpitas@gmail.com",
   hours: {
-    "Monday - Friday": "11:00 AM - 9:00 PM",
-    "Saturday - Sunday": "11:00 AM - 10:00 PM",
+    Monday: "11:30 AM - 2:00 PM, 4:30 PM - 8:30 PM",
+    Tuesday: "Closed",
+    Wednesday: "11:30 AM - 2:00 PM, 4:30 PM - 8:30 PM",
+    Thursday: "11:30 AM - 2:00 PM, 4:30 PM - 8:30 PM",
+    Friday: "11:30 AM - 2:00 PM, 4:30 PM - 8:30 PM",
+    Saturday: "11:30 AM - 2:00 PM, 4:30 PM - 8:30 PM",
+    Sunday: "11:30 AM - 2:00 PM, 4:30 PM - 8:30 PM",
   },
   social: {
     instagram: "https://www.instagram.com/yaichi_restaurant/",
