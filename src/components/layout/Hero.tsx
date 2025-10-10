@@ -133,7 +133,7 @@ export default function Hero() {
                 className="hidden md:flex flex-row flex-wrap gap-4 pt-4"
               >
                 <CTAButton
-                  href="https://www.toasttab.com/yaichi-placeholder"
+                  href={STORE_INFO.delivery.touchbistro}
                   variant="primary"
                   size="lg"
                   className="shadow-xl hover:shadow-2xl transition-shadow"

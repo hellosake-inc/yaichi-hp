@@ -28,6 +28,6 @@ export const STORE_INFO = {
   },
   delivery: {
     doordash: "https://www.doordash.com/store/yaichi-placeholder",
-    toasttab: "https://www.toasttab.com/yaichi-placeholder",
+    touchbistro: "https://www.touchbistro.com/yaichi-placeholder",
   },
 };

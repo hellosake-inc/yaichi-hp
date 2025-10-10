@@ -1,156 +1,156 @@
-import { STORE_INFO } from '@/constants/storeInfo';
+import { STORE_INFO } from "@/constants/storeInfo";
 
 export default function StructuredData() {
   const restaurantSchema = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": STORE_INFO.name,
-    "description": STORE_INFO.tagline,
-    "url": "https://yaichi-restaurant.com",
-    "telephone": STORE_INFO.phone,
-    "email": STORE_INFO.email,
-    "address": {
+    name: STORE_INFO.name,
+    description: STORE_INFO.tagline,
+    url: "https://yaichi-restaurant.com",
+    telephone: STORE_INFO.phone,
+    email: STORE_INFO.email,
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": STORE_INFO.address.street,
-      "addressLocality": STORE_INFO.address.city,
-      "addressRegion": STORE_INFO.address.state,
-      "postalCode": STORE_INFO.address.zip,
-      "addressCountry": "US"
+      streetAddress: STORE_INFO.address.street,
+      addressLocality: STORE_INFO.address.city,
+      addressRegion: STORE_INFO.address.state,
+      postalCode: STORE_INFO.address.zip,
+      addressCountry: "US",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 37.4323,
-      "longitude": -121.8995
+      latitude: 37.4323,
+      longitude: -121.8995,
     },
-    "openingHoursSpecification": [
+    openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "11:00",
-        "closes": "21:00"
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "11:00",
+        closes: "21:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday", "Sunday"],
-        "opens": "11:00",
-        "closes": "22:00"
-      }
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "11:00",
+        closes: "22:00",
+      },
     ],
-    "servesCuisine": ["Japanese", "Udon", "Seafood"],
-    "priceRange": "$$",
-    "acceptsReservations": "True",
-    "menu": "https://www.toasttab.com/yaichi-placeholder",
-    "image": [
+    servesCuisine: ["Japanese", "Udon", "Seafood"],
+    priceRange: "$$",
+    acceptsReservations: "True",
+    menu: STORE_INFO.delivery.touchbistro,
+    image: [
       "https://yaichi-restaurant.com/hero-bg.avif",
       "https://yaichi-restaurant.com/bento/bento-1.jpg",
-      "https://yaichi-restaurant.com/bento/bento-3.jpg"
+      "https://yaichi-restaurant.com/bento/bento-3.jpg",
     ],
-    "sameAs": [
+    sameAs: [
       STORE_INFO.social.facebook,
       STORE_INFO.social.instagram,
-      STORE_INFO.social.twitter
+      STORE_INFO.social.twitter,
     ],
-    "hasOfferCatalog": {
+    hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "name": "Menu",
-      "itemListElement": [
+      name: "Menu",
+      itemListElement: [
         {
           "@type": "OfferCatalog",
-          "name": "Appetizers",
-          "itemListElement": [
+          name: "Appetizers",
+          itemListElement: [
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "MenuItem",
-                "name": "Edamame",
-                "description": "Steamed soybeans"
-              }
-            }
-          ]
+                name: "Edamame",
+                description: "Steamed soybeans",
+              },
+            },
+          ],
         },
         {
           "@type": "OfferCatalog",
-          "name": "Udon",
-          "itemListElement": [
+          name: "Udon",
+          itemListElement: [
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "MenuItem",
-                "name": "Kake Udon",
-                "description": "Traditional hot udon in savory broth"
-              }
-            }
-          ]
-        }
-      ]
+                name: "Kake Udon",
+                description: "Traditional hot udon in savory broth",
+              },
+            },
+          ],
+        },
+      ],
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "reviewCount": "89"
-    }
+      ratingValue: "4.5",
+      reviewCount: "89",
+    },
   };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": STORE_INFO.name,
-    "image": "https://yaichi-restaurant.com/YAICHILOGO.png",
-    "url": "https://yaichi-restaurant.com",
-    "telephone": STORE_INFO.phone,
-    "address": {
+    name: STORE_INFO.name,
+    image: "https://yaichi-restaurant.com/YAICHILOGO.png",
+    url: "https://yaichi-restaurant.com",
+    telephone: STORE_INFO.phone,
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": STORE_INFO.address.street,
-      "addressLocality": STORE_INFO.address.city,
-      "addressRegion": STORE_INFO.address.state,
-      "postalCode": STORE_INFO.address.zip,
-      "addressCountry": "US"
+      streetAddress: STORE_INFO.address.street,
+      addressLocality: STORE_INFO.address.city,
+      addressRegion: STORE_INFO.address.state,
+      postalCode: STORE_INFO.address.zip,
+      addressCountry: "US",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 37.4323,
-      "longitude": -121.8995
+      latitude: 37.4323,
+      longitude: -121.8995,
     },
-    "openingHoursSpecification": [
+    openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "11:00",
-        "closes": "21:00"
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "11:00",
+        closes: "21:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday", "Sunday"],
-        "opens": "11:00",
-        "closes": "22:00"
-      }
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "11:00",
+        closes: "22:00",
+      },
     ],
-    "priceRange": "$$"
+    priceRange: "$$",
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://yaichi-restaurant.com"
+        position: 1,
+        name: "Home",
+        item: "https://yaichi-restaurant.com",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Menu",
-        "item": "https://yaichi-restaurant.com/menu"
+        position: 2,
+        name: "Menu",
+        item: "https://yaichi-restaurant.com/menu",
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": "Contact",
-        "item": "https://yaichi-restaurant.com/contact"
-      }
-    ]
+        position: 3,
+        name: "Contact",
+        item: "https://yaichi-restaurant.com/contact",
+      },
+    ],
   };
 
   return (
@@ -161,7 +161,9 @@ export default function StructuredData() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
       />
       <script
         type="application/ld+json"

@@ -6,6 +6,7 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import Hamburger from "../ui/Hamburger";
 import CTAButton from "../ui/CTAButton";
+import { STORE_INFO } from "@/constants/storeInfo";
 
 const links = [
   { id: 0, title: "Home", path: "/" },
@@ -41,23 +42,28 @@ export default function Header() {
 
   return (
     <>
-      <div className={clsx(isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible", "transition absolute w-full h-full bg-black/30")} onClick={() => setIsMenuOpen(false)}></div>
+      <div
+        className={clsx(
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible",
+          "transition absolute w-full h-full bg-black/30"
+        )}
+        onClick={() => setIsMenuOpen(false)}
+      ></div>
       <nav
         id="Header"
         className={clsx(
           "z-40 w-full transition-all duration-300",
           isHomepage &&
-            (isScrolled || isMenuOpen ? "bg-white shadow-card" : "bg-white/95 shadow-subtle"),
+            (isScrolled || isMenuOpen
+              ? "bg-white shadow-card"
+              : "bg-white/95 shadow-subtle"),
           isHomepage ? "fixed top-0" : "sticky top-0 bg-white shadow-card"
         )}
       >
         <div className="container">
           <div className="w-full py-4 mx-auto lg:flex md:justify-between md:items-center">
             <div className="flex items-center justify-between w-full">
-              <Link
-                href="/"
-                className="flex items-center justify-center"
-              >
+              <Link href="/" className="flex items-center justify-center">
                 <Image
                   src="/YAICHILOGO.png"
                   alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
@@ -99,7 +105,7 @@ export default function Header() {
               </div>
               <div className="flex flex-col gap-4 mt-6 lg:flex-row lg:gap-3 lg:mt-0 lg:ml-4">
                 <CTAButton
-                  href="https://www.toasttab.com/yaichi-placeholder"
+                  href={STORE_INFO.delivery.touchbistro}
                   variant="primary"
                   size="sm"
                 >

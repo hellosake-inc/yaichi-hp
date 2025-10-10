@@ -10,6 +10,7 @@ import type {
   MenuSection as MenuSectionType,
 } from "@/types/menu";
 import ScrollAnimated from "./ScrollAnimated";
+import { STORE_INFO } from "@/constants/storeInfo";
 
 const typedMenuData = menuData as MenuData;
 
@@ -130,12 +131,12 @@ const MenuSection = () => {
 
         <ScrollAnimated variant="opacity" className="text-center mt-12">
           <a
-            href="https://www.toasttab.com/yaichi-placeholder"
+            href={STORE_INFO.delivery.touchbistro}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
-            View Full Menu on ToastTab
+            View Full Menu on TouchBistro
             <ExternalLink className="w-4 h-4" />
           </a>
         </ScrollAnimated>

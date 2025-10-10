@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import CTAButton from "./CTAButton";
 import clsx from "clsx";
+import { STORE_INFO } from "@/constants/storeInfo";
 
 const SCROLL_THRESHOLD = 200;
 
@@ -36,7 +37,7 @@ export default function FloatingCTA() {
       <div className="container px-4 py-3">
         <div className="flex gap-3 justify-center">
           <CTAButton
-            href="https://www.toasttab.com/yaichi-placeholder"
+            href={STORE_INFO.delivery.touchbistro}
             variant="primary"
             size="md"
             className="flex-1 justify-center min-h-[44px]"
