@@ -27,7 +27,7 @@ export default function Hero() {
     hidden: { opacity: 0 },
   };
 
-  const mobileHeight = "h-[80vh]";
+  const mobileHeight = "h-[85vh]";
 
   return (
     <section
@@ -154,7 +154,7 @@ export default function Hero() {
               <Animated
                 delay={1.0}
                 variant="top-sm"
-                className="flex flex-row items-center gap-6 pt-5"
+                className="flex flex-row items-center gap-6 pt-3"
               >
                 <div className="flex flex-row items-center gap-4">
                   <SocialLink
