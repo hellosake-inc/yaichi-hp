@@ -90,11 +90,6 @@ const MenuSection = () => {
       ] as MenuItem[],
       image: "/bowl.avif",
     },
-    {
-      title: "Desserts",
-      items: typedMenuData["Desserts"] as MenuItem[],
-      image: "/bento/mochi.jpg",
-    },
   ];
 
   return (
