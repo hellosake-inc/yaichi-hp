@@ -108,7 +108,7 @@ export default function Hero() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-white">Your Connection</span>
                   <br />
-                  <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r text-white bg-clip-text text-transparent">
                     to Authentic Japan
                   </span>
                 </h1>
