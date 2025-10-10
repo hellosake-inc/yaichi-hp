@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import bg from "@/public/hero-bg.avif";
+import bgSp from "@/public/hero-bg-sp.avif";
 import Image from "next/image";
 import { useAnimation, motion } from "framer-motion";
 import SocialLink from "../ui/SocialLink";
@@ -29,17 +30,20 @@ export default function Hero() {
   return (
     <section
       id="Hero"
-      className="relative w-full h-screen bg-right bg-no-repeat bg-cover bg-neutral-900"
+      className={clsx(
+        "relative w-full bg-right bg-no-repeat bg-cover bg-neutral-900",
+        isMobile ? "h-[70vh]" : "h-screen"
+      )}
       style={{
         backgroundImage: `linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0))`,
       }}
     >
       <div
         className={clsx(
-          "absolute top-0 left-0 z-10 w-full h-full",
+          "absolute top-0 left-0 z-10 w-full",
           isMobile
-            ? "bg-gradient-to-r from-neutral-900/80 to-neutral-900/40"
-            : "bg-gradient-to-r from-neutral-900/90 via-neutral-900/60 to-transparent"
+            ? "bg-gradient-to-r from-neutral-900/80 to-neutral-900/40 h-[70vh]"
+            : "bg-gradient-to-r from-neutral-900/90 via-neutral-900/60 to-transparent h-full"
         )}
       ></div>
       <motion.div
@@ -48,9 +52,9 @@ export default function Hero() {
         variants={animationVariants}
         transition={{ ease: "easeOut", duration: 1.5 }}
       >
-        {(!isMobile || isMobile === undefined) && (
+        {!isMobile || isMobile === undefined ? (
           <Image
-            className="absolute top-0 left-0 object-cover w-full transition z-1"
+            className="absolute top-0 left-0 object-cover w-full transition z-1 h-full"
             src={bg}
             fill
             onLoad={() => setLoaded(true)}
@@ -58,14 +62,10 @@ export default function Hero() {
             placeholder="blur"
             alt="Traditional Japanese cuisine background"
           />
-        )}
-        {(isMobile || isMobile === undefined) && (
+        ) : (
           <Image
-            className="absolute top-0 left-0 object-cover object-left w-full transition z-1"
-            src={
-              "https://images.unsplash.com/photo-1526318896980-cf78c088247c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-            fill
+            className="absolute top-0 left-0 object-cover object-left w-full transition z-1 h-[70vh]"
+            src={bgSp}
             onLoad={() => setLoaded(true)}
             priority
             alt="Traditional Japanese cuisine background"
@@ -120,9 +120,9 @@ export default function Hero() {
                 variant="top-sm"
                 className="text-base sm:text-lg md:text-xl text-neutral-200 leading-relaxed max-w-xl"
               >
-                Yaichi (+81) - Japan&apos;s country code. We bring genuine Japanese taste 
-                directly to your table. Handcrafted udon noodles and soul-warming dashi 
-                broth await.
+                Yaichi (+81) - Japan&apos;s country code. We bring genuine
+                Japanese taste directly to your table. Handcrafted udon noodles
+                and soul-warming dashi broth await.
               </Animated>
 
               {/* CTA Buttons - Hidden on Mobile */}
