@@ -13,7 +13,7 @@ export default function FloatingCTA() {
     const handleScroll = () => {
       const now = Date.now();
       if (now - lastScrollTime.current < 16) return; // ~60fps throttle
-      
+
       lastScrollTime.current = now;
       const scrolled = window.scrollY > SCROLL_THRESHOLD;
       setIsVisible(scrolled);
@@ -31,6 +31,7 @@ export default function FloatingCTA() {
         "fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-2xl transition-transform duration-300 lg:hidden",
         isVisible ? "translate-y-0" : "translate-y-full"
       )}
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <div className="container px-4 py-3">
         <div className="flex gap-3 justify-center">

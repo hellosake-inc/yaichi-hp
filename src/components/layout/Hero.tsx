@@ -154,7 +154,7 @@ export default function Hero() {
               <Animated
                 delay={1.0}
                 variant="top-sm"
-                className="flex flex-row items-center gap-6 pt-8"
+                className="flex flex-row items-center gap-6 pt-5"
               >
                 <div className="flex flex-row items-center gap-4">
                   <SocialLink
