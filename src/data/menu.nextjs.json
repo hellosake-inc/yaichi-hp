@@ -40,17 +40,17 @@
   ],
   "Seafood Bowls (All served with Minced tuna Hokkaido Scallop, Tobiko, and Snow Crab)": [
     {
-      "name": "UME* –  Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
+      "name": "UME –  Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
       "price": 26.0,
       "image": "/menu-items/ume.avif"
     },
     {
-      "name": "TAKE* – Marinated Hokkaido Salmon Roe*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
+      "name": "TAKE – Marinated Hokkaido Salmon Roe*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
       "price": 32.0,
       "image": "/menu-items/take.avif"
     },
     {
-      "name": "MATSU*– Marinated Hokkaido Salmon Roe*, Hokkaido Sea Urchin*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
+      "name": "MATSU – Marinated Hokkaido Salmon Roe*, Hokkaido Sea Urchin*, Shiso Leaf, Nori Seaweed, Wasabi, Pickled Ginger",
       "price": 41.0,
       "image": "/menu-items/matsu.avif"
     }
