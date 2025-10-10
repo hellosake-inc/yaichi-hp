@@ -74,21 +74,21 @@ const MenuSection = () => {
     {
       title: "Appetizers",
       items: typedMenuData["Appetizers"] as MenuItem[],
-      image: "/bento/bento-1.jpg",
+      image: "/appetizers.avif",
     },
     {
-      title: "Hot Udon",
+      title: "Udon",
       items:
         (typedMenuData["Udon (Japanese Wheat Noodles)"] as any)?.["Hot Udon"] ||
         [],
-      image: "/bento/ramen.svg",
+      image: "/udon.avif",
     },
     {
       title: "Seafood Bowls",
       items: typedMenuData[
         "Seafood Bowls (All served with Minced tuna Hokkaido Scallop, Tobiko, and Snow Crab)"
       ] as MenuItem[],
-      image: "/bento/bento-3.jpg",
+      image: "/bowl.avif",
     },
     {
       title: "Desserts",
