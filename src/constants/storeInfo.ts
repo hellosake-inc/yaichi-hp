@@ -32,7 +32,9 @@ export const STORE_INFO = {
     twitter: "#",
   },
   delivery: {
-    doordash: "https://www.doordash.com/store/yaichi-placeholder",
-    touchbistro: "https://www.touchbistro.com/yaichi-placeholder",
+    doordash:
+      "https://order.online/business/yaichi-japanese-restaurant-14788001?delivery=true",
+    touchbistro:
+      "https://order.online/business/yaichi-japanese-restaurant-14788001?pickup=true",
   },
 };

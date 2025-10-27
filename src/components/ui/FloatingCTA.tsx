@@ -46,7 +46,7 @@ export default function FloatingCTA() {
             Order Online
           </CTAButton>
           <CTAButton
-            href="https://www.doordash.com/store/yaichi-placeholder"
+            href={STORE_INFO.delivery.doordash}
             variant="secondary"
             size="md"
             className="flex-1 justify-center min-h-[44px]"

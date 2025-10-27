@@ -141,7 +141,7 @@ export default function Hero() {
                   Order Online
                 </CTAButton>
                 <CTAButton
-                  href="https://www.doordash.com/store/yaichi-placeholder"
+                  href={STORE_INFO.delivery.doordash}
                   variant="secondary"
                   size="lg"
                   className="bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all"
