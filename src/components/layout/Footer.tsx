@@ -16,10 +16,7 @@ export default function Footer() {
         <div className="max-w-screen-xl mx-auto">
           {/* Logo and Navigation */}
           <div className="text-center mb-8">
-            <Link
-              href="/"
-              className="flex items-center justify-center mb-4"
-            >
+            <Link href="/" className="flex items-center justify-center mb-4">
               <Image
                 src="/YAICHILOGO.png"
                 alt="Yaichi - Authentic Japanese Udon & Seafood Restaurant"
@@ -45,11 +42,13 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Location</h3>
               <p className="text-sm text-gray-600">
-                {STORE_INFO.address.street}<br />
-                {STORE_INFO.address.city}, {STORE_INFO.address.state} {STORE_INFO.address.zip}
+                {STORE_INFO.address.street}
+                <br />
+                {STORE_INFO.address.city}, {STORE_INFO.address.state}{" "}
+                {STORE_INFO.address.zip}
               </p>
             </div>
-            
+
             {/* Hours */}
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Hours</h3>
@@ -59,13 +58,23 @@ export default function Footer() {
                 </p>
               ))}
             </div>
-            
+
             {/* Contact */}
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Contact</h3>
               <p className="text-sm text-gray-600">
-                Phone: <a href={`tel:${STORE_INFO.phone}`} className="hover:underline">{STORE_INFO.phone}</a><br />
-                Email: <a href={`mailto:${STORE_INFO.email}`} className="hover:underline">{STORE_INFO.email}</a>
+                Phone:{" "}
+                <a href={`tel:${STORE_INFO.phone}`} className="hover:underline">
+                  {STORE_INFO.phone}
+                </a>
+                <br />
+                Email:{" "}
+                <a
+                  href={`mailto:${STORE_INFO.email}`}
+                  className="hover:underline"
+                >
+                  {STORE_INFO.email}
+                </a>
               </p>
             </div>
           </div>
@@ -75,6 +84,17 @@ export default function Footer() {
             <span className="text-sm text-gray-500">
               © 2024 {STORE_INFO.name} Restaurant. All Rights Reserved.
             </span>
+            <p className="text-xs text-gray-400 mt-2">
+              Produced by{" "}
+              <a
+                href="https://hellosake.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline hover:text-gray-600 transition-colors"
+              >
+                HelloSake, Inc
+              </a>
+            </p>
           </div>
         </div>
       </div>
