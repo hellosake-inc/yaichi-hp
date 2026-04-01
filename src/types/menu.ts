@@ -1,6 +1,6 @@
 export type MenuItem = {
   name: string;
-  price: number | null;
+  price: number | string | null;
   image?: string;
 };
 
