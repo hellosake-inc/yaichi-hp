@@ -14,8 +14,9 @@ import { STORE_INFO } from "@/constants/storeInfo";
 
 const typedMenuData = menuData as MenuData;
 
-const formatPrice = (price: number | null) => {
+const formatPrice = (price: number | string | null) => {
   if (price === null || price === 0) return "";
+  if (typeof price === "string") return price;
   return `$${price.toFixed(2)}`;
 };
 
@@ -99,9 +100,7 @@ const MenuSection = () => {
     },
     {
       title: "Seafood Bowls",
-      items: typedMenuData[
-        "Seafood Bowls (All served with Minced tuna Hokkaido Scallop, Tobiko, and Snow Crab)"
-      ] as MenuItem[],
+      items: typedMenuData["Seafood Bowls"] as MenuItem[],
       image: "/bowl.avif",
     },
   ];
