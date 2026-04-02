@@ -53,14 +53,6 @@
       "name": "Matsu Bowl (Superior): Take Bowl ingredients + Hokkaido Sea Urchin",
       "price": 41.0,
       "image": "/menu-items/matsu.avif"
-    },
-    {
-      "name": "Small Ume Bowl",
-      "price": 12.0
-    },
-    {
-      "name": "Ochazuke Set Option",
-      "price": 4.5
     }
   ],
   "Udon (Japanese Wheat Noodles)": {
@@ -87,7 +79,8 @@
       },
       {
         "name": "Tempura Udon: Shrimp, Sweet Potato, Pumpkin, and Shishito Tempura with green onion, seaweed, yuzu",
-        "price": 23.5
+        "price": 23.5,
+        "image": "/menu-items/tempra-udon-hot.avif"
       },
       {
         "name": "Nabe Udon: American Wagyu Beef (Gyu-Bara or Chuck Flap +6), Soft Boiled Egg, Nappa Cabbage, Shitake and Maitake Mushrooms",
@@ -101,7 +94,8 @@
       },
       {
         "name": "Take-Trio Bukkake Udon: Snow Crab, Hokkaido Scallop, and Salmon Roe over udon and cold dashi with shiso, tempura bits",
-        "price": 32.0
+        "price": 32.0,
+        "image": "/menu-items/take-bukkake.avif"
       }
     ]
   },

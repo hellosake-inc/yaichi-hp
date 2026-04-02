@@ -68,12 +68,12 @@ const MenuCategory = ({
         <div className="bg-green-50/50 rounded-lg p-6 h-full">
           <h3 className="text-2xl font-semibold text-gray-900 mb-4">{title}</h3>
           <div className="space-y-1">
-            {items.slice(0, 5).map((item, index) => (
+            {items.filter(item => item.image).slice(0, 6).map((item, index) => (
               <MenuItemCard key={index} item={item} />
             ))}
-            {items.length > 5 && (
+            {items.filter(item => item.image).length > 6 && (
               <p className="text-sm text-gray-500 pt-2">
-                +{items.length - 5} more items available
+                +{items.filter(item => item.image).length - 6} more items available
               </p>
             )}
           </div>
@@ -93,9 +93,10 @@ const MenuSection = () => {
     },
     {
       title: "Udon",
-      items:
-        (typedMenuData["Udon (Japanese Wheat Noodles)"] as any)?.["Hot Udon"] ||
-        [],
+      items: [
+        ...((typedMenuData["Udon (Japanese Wheat Noodles)"] as any)?.["Hot Udon"] || []),
+        ...((typedMenuData["Udon (Japanese Wheat Noodles)"] as any)?.["Cold Udon"] || []),
+      ],
       image: "/udon.avif",
     },
     {
