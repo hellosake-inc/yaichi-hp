@@ -14,12 +14,6 @@ import { STORE_INFO } from "@/constants/storeInfo";
 
 const typedMenuData = menuData as MenuData;
 
-const formatPrice = (price: number | string | null) => {
-  if (price === null || price === 0) return "";
-  if (typeof price === "string") return price;
-  return `$${price.toFixed(2)}`;
-};
-
 const MenuItemCard = ({ item }: { item: MenuItem }) => (
   <div className="flex items-start gap-3 py-2 border-b border-green-200/30 last:border-0">
     {item.image && (
@@ -35,9 +29,6 @@ const MenuItemCard = ({ item }: { item: MenuItem }) => (
     )}
     <div className="flex justify-between items-start flex-1 min-w-0">
       <span className="text-gray-700 text-sm pr-2 flex-1">{item.name}</span>
-      <span className="text-gray-900 font-medium text-sm whitespace-nowrap">
-        {formatPrice(item.price)}
-      </span>
     </div>
   </div>
 );
